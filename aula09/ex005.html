@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background: rgb(88, 89, 175);
+            font: normal 18pt Arial;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div>Clique em mim</div>
+    <div id="aidi">Esse é o segundo texto</div>
+    <div name="nome">Isto é um nome</div>
+    <div id="seletor">seletor</div>
+    <div class="Sclasse">Esse é o texto "classe"</div>
+    <script>
+        /* Usando o Metódo de acesso por marca (getElementsByTagName) */
+        
+        var mrc = window.document.getElementsByTagName("div")[0]
+        mrc.style.color = 'blue'
+        
+        /* Usando o metódo de acesso por id (getElementByID) */
+
+        var aidi = window.document.getElementById('aidi')     
+        aidi.style.background = 'Green'
+        aidi.innerText = 'Estou aguardando'
+
+        /* Usando o metódo de acesso por nome (getElementsByName) */
+
+        var nome = window.document.getElementsByName('nome')[0]
+        nome.style.color = 'yellow'
+        
+        /* Usando o metódo de acesso por seletor (querySelector) */
+        var slt = window.document.querySelector('div#seletor')
+        slt.style.background = 'red'
+
+        /* Usando o metódo de acesso por seletor para classe (querySelector)*/
+
+        var clss = window.document.querySelector('div.Sclasse')
+        clss.style.color = 'red'
+    </script>
+</body>
+</html>
