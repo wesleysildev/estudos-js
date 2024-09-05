@@ -1,0 +1,34 @@
+<!DOCTYPE html> <!--Exercicio Proposto ao final da aula 11!-->
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador</title>
+</head>
+<body>
+    <style>
+        body{
+            font: normal 15pt Courier;   
+        }
+
+    </style>
+    
+    <h1>Verificador de Nacionalidade</h1>
+    Qual seu país de origem: <input type= "form" name="ncn" id="ncn">
+    <input type="button" value="Verifique Agora!" onclick="verificar()">
+    <div id="br"> </div>
+    <script>
+        
+        function verificar(){
+        var n = document.getElementById('ncn')
+        var res = document.getElementById('br')
+
+        if (n.value == 'Brasil') {
+            res.innerHTML = 'Você é brasileiro!'
+        } else {
+            res.innerHTML = 'Você é estrangeiro!'
+        }
+    }
+    </script>    
+</body>
+</html>
